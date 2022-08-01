@@ -1,4 +1,22 @@
-# Task 1. Set up Terraform and Cloud Shell
+# Terraform 101
+
+## Overview
+
+Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open-source tool that codifies APIs into declarative configuration files that can be shared among team members, treated as code, edited, reviewed, and versioned.
+
+In this lab, you create a Terraform configuration with a module to automate the deployment of Google Cloud infrastructure. Specifically, you deploy one auto mode network with a firewall rule and two VM instances, as shown in this diagram:
+
+## Objectives
+
+In this lab, you learn how to perform the following tasks:
+
+* Create a configuration for an auto mode network
+* Create a configuration for a firewall rule
+* Create a module for VM instances
+* Create and deploy a configuration
+* Verify the deployment of a configuration
+
+## Task 1. Set up Terraform and Cloud Shell
 
 1. In the Cloud Console, click **Activate Cloud Shell** (Activate Cloud Shell icon).
 
@@ -8,7 +26,7 @@
 
 `terraform --version`
 
-# Task 2. Create mynetwork and its resources
+## Task 2. Create mynetwork and its resources
 
 Create the following file structure:
 
@@ -49,9 +67,9 @@ Terraform determined that the following 4 resources need to be added:
 
 `yes`
 
-# Task 3. Verify your deployment
+## Task 3. Verify your deployment
 
-## Verify your network in the Cloud Console
+### Verify your network in the Cloud Console
 
 1. In the Cloud Console, on the **Navigation menu**, click **VPC network** > **VPC networks**.
 
@@ -63,7 +81,7 @@ Terraform determined that the following 4 resources need to be added:
 
 5. View the **mynetwork-allow-http-ssh-rdp-icmp** firewall rule for **mynetwork**.
 
-## Verify your VM instances in the Cloud Console
+### Verify your VM instances in the Cloud Console
 
 1. On the **Navigation menu**, click **Compute Engine** > **VM instances**.
 
@@ -77,7 +95,7 @@ Terraform determined that the following 4 resources need to be added:
 
 `ping -c 3 <Enter mynet-eu-vm's internal IP here>`
 
-# Task 4. Review
+## Task 4. Review
 
 In this lab, you created a Terraform configuration with a module to automate the deployment of Google Cloud infrastructure. As your configuration changes, Terraform can create incremental execution plans, which allows you to build your overall configuration step by step.
 
