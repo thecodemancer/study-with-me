@@ -13,7 +13,7 @@
 7. [Vanhack](https://vanhack.com)
 8. [Near](https://www.hirewithnear.com/)
 9. [Prediktive](https://prediktive.com/)
-10. [https://ai-jobs.net](https://ai-jobs.net)
+10. [ai-jobs.net](https://ai-jobs.net)
 
 ## 💸 List of data roles and salaries
 
