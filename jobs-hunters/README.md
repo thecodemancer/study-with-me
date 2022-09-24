@@ -13,7 +13,8 @@
 7. [Vanhack](https://vanhack.com)
 8. [Near](https://www.hirewithnear.com/)
 9. [Prediktive](https://prediktive.com/)
-10. [ai-jobs.net](https://ai-jobs.net)
+10. [Ai-jobs.net](https://ai-jobs.net)
+11. [Tecla](https://app.tecla.io/)
 
 ## 💸 List of data roles and salaries
 
