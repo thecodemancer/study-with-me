@@ -4,4 +4,6 @@
 
 https://www.youtube.com/watch?v=s8tSxHEoZyQ
 
+[Dark Classical Academia - You’re studying in a large library at midnight 🕯️](https://www.youtube.com/watch?v=D9km3yXmR8k)
+
 https://www.youtube.com/watch?v=08BeYAlBZTY
