@@ -49,6 +49,13 @@ The origin parameter specifies the remote repository, and the master parameter s
 
 Use the ```git fetch``` command. This command will download the latest objects, commits, and refs from the remote repository into your local repository. **It will not merge** the changes into your working directory, but it will create new remote-tracking branches that point to the fetched commits. This will allow you to see what changes have been made to the remote repository without actually updating your local working directory.
 
+```git fetch origin main```
+
+## Fetch and merge local git repository with the latest changes from a remote repository.
+
+The ```git pull``` command is used to fetch and merge changes from a remote repository into your local repository. It is a combination of the ```git fetch``` and ```git merge``` commands.
+
+```git pull origin main```
 ## Conclusion
 In this class, we learned the basics of git by creating a new repository, adding files, making changes, and committing those changes. We also learned how to push our changes to a remote repository on GitHub.
 
