@@ -45,6 +45,10 @@ To push your changes to GitHub, you can run the following command:
 
 The origin parameter specifies the remote repository, and the master parameter specifies the branch that you want to push your changes to.
 
+## Keep your local Git repository up-to-date with the latest changes from a remote repository.
+
+Use the ```git fetch``` command. This command will download the latest objects, commits, and refs from the remote repository into your local repository. **It will not merge** the changes into your working directory, but it will create new remote-tracking branches that point to the fetched commits. This will allow you to see what changes have been made to the remote repository without actually updating your local working directory.
+
 ## Conclusion
 In this class, we learned the basics of git by creating a new repository, adding files, making changes, and committing those changes. We also learned how to push our changes to a remote repository on GitHub.
 
