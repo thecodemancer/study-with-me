@@ -102,3 +102,7 @@ Terraform determined that the following 4 resources need to be added:
 In this lab, you created a Terraform configuration with a module to automate the deployment of Google Cloud infrastructure. As your configuration changes, Terraform can create incremental execution plans, which allows you to build your overall configuration step by step.
 
 The instance module allowed you to re-use the same resource configuration for multiple resources while providing properties as input variables. You can leverage the configuration and module that you created as a starting point for future deployments.
+
+## More Terraform
+
+https://developer.hashicorp.com/terraform/tutorials/gcp-get-started
