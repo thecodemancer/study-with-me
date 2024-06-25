@@ -44,7 +44,7 @@ EXECUTE IMMEDIATE format("""
   FROM
     ML.GENERATE_TEXT(
       MODEL `%s.%s.%s`,
-      (SELECT prompt FROM `e%s.%s.%s`),
+      (SELECT prompt FROM `%s.%s.%s`),
       STRUCT(
         0.8 AS temperature,
         1024 AS max_output_tokens,
