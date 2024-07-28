@@ -65,5 +65,8 @@ Go to `IAM` --> `GRANT ACCESS`. Then, in `Add Principals` enter the `bqcx-[PROJE
 
 https://cloud.google.com/bigquery/docs/generate-text-tutorial#grant-permissions
 
-
+## BONUS
+https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-generate-text#text-analysis
+https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-create
+https://cloud.google.com/bigquery/docs/reference/standard-sql/bigqueryml-syntax-create-remote-model#gemini-api-text-models
 
