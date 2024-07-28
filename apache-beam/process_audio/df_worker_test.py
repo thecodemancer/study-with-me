@@ -12,19 +12,19 @@ class ProcessAudio(beam.DoFn):
         # Initialize GCS client and download the file
         client = storage.Client()
         bucket = client.get_bucket(element['bucket'])
-        blob = bucket.get_blob('sample.wav')
+        blob = bucket.get_blob('rock_and_roll.mp3')
         audio_data = blob.download_as_bytes()
 
         # Use PyDub to process the audio
-        audio = AudioSegment.from_file(io.BytesIO(audio_data), format="wav")
+        audio = AudioSegment.from_file(io.BytesIO(audio_data), format="mp3")
         processed_audio = audio.set_channels(1).set_frame_rate(16000)  # Example processing
 
         # Write the processed audio to an in-memory file
         output_buffer = io.BytesIO()
-        processed_audio.export(output_buffer, format="wav")
+        processed_audio.export(output_buffer, format="mp3")
         output_buffer.seek(0)
 
-        yield {'bucket': element['bucket'], 'name': 'sample.wav', 'data': output_buffer.read()}
+        yield {'bucket': element['bucket'], 'name': 'rock_and_roll.mp3', 'data': output_buffer.read()}
 
 class WriteToGCS(beam.DoFn):
     def process(self, element, output_bucket, *args, **kwargs):
@@ -32,7 +32,7 @@ class WriteToGCS(beam.DoFn):
         client = storage.Client()
         bucket = client.get_bucket(output_bucket)
         blob = bucket.blob(f"/output/{element['name']}")
-        blob.upload_from_string(element['data'], content_type="audio/wav")
+        blob.upload_from_string(element['data'], content_type="audio/p3")
         logging.info(f"Processed file written to: gs://{output_bucket}/output/{element['name']}")
 
 def run(argv=None):
