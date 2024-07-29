@@ -1,5 +1,7 @@
 gcloud dataflow flex-template build gs://$BUCKET/df_test.json \
- --image "us.gcr.io/$PROJECT/df-template:latest" \
+ --image "${REGION}-docker.pkg.dev/${PROJECT}/process-audio/df-template:latest" \
+ --project "${PROJECT}" \
+ --network "${NETWORK}" \
+ --subnetwork "${SUBNETWORK}" \
  --sdk-language "PYTHON" \
- --metadata-file "metadata.json" \
- --project $PROJECT
+ --metadata-file "metadata.json"

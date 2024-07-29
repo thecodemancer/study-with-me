@@ -24,7 +24,7 @@ class ProcessAudio(beam.DoFn):
         processed_audio.export(output_buffer, format="mp3")
         output_buffer.seek(0)
 
-        yield {'bucket': element['bucket'], 'name': 'rock_and_roll.mp3', 'data': output_buffer.read()}
+        yield {'bucket': element['bucket'], 'name': 'rock_and_roll_processed.mp3', 'data': output_buffer.read()}
 
 class WriteToGCS(beam.DoFn):
     def process(self, element, output_bucket, *args, **kwargs):
@@ -38,13 +38,22 @@ class WriteToGCS(beam.DoFn):
 def run(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('--output', required=True)
+    parser.add_argument('--sdk_container_image', required=True)
+
     known_args, pipeline_args = parser.parse_known_args(argv)
+    #pipeline_options = PipelineOptions(pipeline_args)
 
-    pipeline_options = PipelineOptions(pipeline_args)
-
-
-    # options.setSdkContainerImage("us.gcr.io/my-project-1515096689528/df-worker:latest")
-    # logging.info(options)
+        #sdk_location="container"
+        #sdk_container_image="us-south1-docker.pkg.dev/evidentemvp/evidente/dataflow/insights_interpreter:latest"
+    pipeline_options = PipelineOptions(
+        streaming=False,
+        save_main_session=True,
+        sdk_location="container",
+        sdk_container_image=known_args.sdk_container_image
+    )
+    logging.info(pipeline_options)
+    #options.setSdkContainerImage(known_args.sdk_container_image)
+    #logging.info(options)
 
     with beam.Pipeline(options=pipeline_options) as p:
         # Read the input file from GCS
