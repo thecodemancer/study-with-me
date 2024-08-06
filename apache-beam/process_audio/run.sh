@@ -5,7 +5,4 @@ gcloud dataflow flex-template run "df-work2-`date +%Y%m%d-%H%M%S`" \
  --network "${NETWORK}" \
  --subnetwork "${SUBNETWORK}" \
  --additional-experiments="use_runner_v2" \
- --parameters output=$BUCKET,sdk_container_image=${REGION}-docker.pkg.dev/${PROJECT}/process-audio/df-worker:latest
-
-
- 
+ --parameters output=$BUCKET,sdk_container_image=${REGION}-docker.pkg.dev/${PROJECT}/process-audio/df-worker
