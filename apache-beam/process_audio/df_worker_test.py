@@ -32,7 +32,7 @@ class WriteToGCS(beam.DoFn):
         client = storage.Client()
         bucket = client.get_bucket(output_bucket)
         blob = bucket.blob(f"/output/{element['name']}")
-        blob.upload_from_string(element['data'], content_type="audio/p3")
+        blob.upload_from_string(element['data'], content_type="audio/mp3")
         logging.info(f"Processed file written to: gs://{output_bucket}/output/{element['name']}")
 
 def run(argv=None):
