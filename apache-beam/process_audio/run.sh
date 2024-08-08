@@ -4,5 +4,5 @@ gcloud dataflow flex-template run "df-work2-`date +%Y%m%d-%H%M%S`" \
  --region $REGION \
  --network "${NETWORK}" \
  --subnetwork "${SUBNETWORK}" \
- --additional-experiments="use_runner_v2" \
+ --additional-experiments="use_runner_v2,use_network_tags=http-server" \
  --parameters output=$BUCKET,sdk_container_image=${REGION}-docker.pkg.dev/${PROJECT}/process-audio/df-worker
