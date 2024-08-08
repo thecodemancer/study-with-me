@@ -1,2 +1,2 @@
 apache-beam[gcp]==2.57.0
-pydub
+pydub==0.25.1
