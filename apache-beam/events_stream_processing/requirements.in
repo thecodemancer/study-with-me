@@ -1,0 +1,4 @@
+apache-beam[gcp]
+google-cloud-pubsub
+google-cloud-bigquery
+python-dotenv==1.0.0
