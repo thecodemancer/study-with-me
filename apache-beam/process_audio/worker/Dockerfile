@@ -7,10 +7,9 @@ RUN apt-get update \
 # Install Apache Beam SDK and other dependencies
 RUN pip install --no-cache-dir \
     apache-beam[gcp]==2.57.0 \
-    boto3==1.26.90 \
     firebase_admin==6.1.0 \
     gcsfs \
-    pydub \
+    pydub==0.25.1 \
     google-cloud-storage
 
 # Copy files from the official SDK image, including script/dependencies
