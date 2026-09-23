@@ -25,7 +25,6 @@ WITH RankedSalaries AS (
         employee_name,
         department,
         salary,
-        -- DENSE_RANK() ensures unique salary tiers are ranked sequentially (1, 2, 3...)
         DENSE_RANK() OVER (ORDER BY salary DESC) AS salary_rank
     FROM 
         dataset_for_challenges.employees
